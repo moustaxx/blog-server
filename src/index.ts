@@ -4,6 +4,8 @@ import { createConnection } from 'typeorm';
 import schema from './graphql/schema';
 import resolvers from './graphql/resolvers';
 
+const port = process.env.PORT || '4000';
+
 const main = async () => {
 	const app = fastify();
 	const server = new ApolloServer({
@@ -13,8 +15,8 @@ const main = async () => {
 	});
 
 	app.register(server.createHandler());
-	await app.listen(4000);
+	await app.listen(port);
 	await createConnection();
-	console.log('🚀 Server ready at: http://localhost:4000/graphql');
+	console.log(`🚀 Server ready at: http://localhost:${port}/graphql`);
 };
 main();
