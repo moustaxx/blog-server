@@ -1,5 +1,5 @@
 node_modules
 Thumbs.db
 yarn-error.log
-ormconfig.json
+.env
 .vscode
