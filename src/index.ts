@@ -4,7 +4,7 @@ import { createConnection } from 'typeorm';
 import schema from './graphql/schema';
 import resolvers from './graphql/resolvers';
 
-const port = process.env.PORT || '4000';
+const port = Number(process.env.PORT) || 4000;
 
 const main = async () => {
 	const app = fastify();
@@ -15,7 +15,7 @@ const main = async () => {
 	});
 
 	app.register(server.createHandler());
-	await app.listen(port);
+	await app.listen(port, '0.0.0.0');
 	await createConnection();
 	console.log(`🚀 Server ready at: http://localhost:${port}/graphql`);
 };
