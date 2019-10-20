@@ -1,4 +1,4 @@
-import { Column, PrimaryGeneratedColumn, Entity, BaseEntity } from 'typeorm';
+import { Column, PrimaryGeneratedColumn, Entity, BaseEntity, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity()
 class Comment extends BaseEntity {
@@ -13,6 +13,12 @@ class Comment extends BaseEntity {
 
 	@Column()
 	author: string;
+
+	@CreateDateColumn()
+	createdDate: Date;
+
+	@UpdateDateColumn()
+	updatedDate: Date;
 }
 
 export default Comment;

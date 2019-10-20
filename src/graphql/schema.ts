@@ -1,11 +1,15 @@
 import { gql } from 'apollo-server-fastify';
 
 export default gql`
+	scalar Date
+
 	type Comment {
 		id: String!
 		text: String!
 		postSlug: String!
 		author: String!
+		createdDate: Date!
+		updatedDate: Date!
 	}
 
 	input Where {

@@ -1,5 +1,6 @@
 import { IResolvers } from 'graphql-tools';
 import { ApolloError, UserInputError } from 'apollo-server-core';
+import { GraphQLDateTime } from 'graphql-iso-date';
 
 import Comment from '../entity/Comment';
 
@@ -44,5 +45,9 @@ const Mutation = {
 	},
 };
 
-const resolvers = { Query, Mutation } as IResolvers;
+const resolvers = {
+	Query,
+	Mutation,
+	Date: GraphQLDateTime,
+} as IResolvers;
 export default resolvers;
