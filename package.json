@@ -3,7 +3,7 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "tsnd --transpileOnly --respawn --no-deps --ignore-watch node_modules ./src",
-		"start": "ts-node ./src",
+		"start": "ts-node --transpile-only ./src",
 		"typeorm": "./node_modules/.bin/typeorm "
 	},
 	"dependencies": {
