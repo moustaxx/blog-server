@@ -11,6 +11,7 @@ const main = async () => {
 	const server = new ApolloServer({
 		resolvers,
 		typeDefs: schema,
+		introspection: true,
 		tracing: true,
 	});
 
