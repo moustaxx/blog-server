@@ -7,7 +7,7 @@
 		"typeorm": "./node_modules/.bin/typeorm "
 	},
 	"dependencies": {
-		"apollo-server-core": "^2.9.6",
+		"apollo-server-core": "^2.14.2",
 		"apollo-server-fastify": "^2.9.6",
 		"class-validator": "^0.10.2",
 		"dotenv": "^8.2.0",
